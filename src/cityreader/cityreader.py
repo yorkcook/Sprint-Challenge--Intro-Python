@@ -32,7 +32,7 @@ def cityreader(cities=[]):
       reader = csv.reader(f, delimiter=',')
       next(reader)
       for i in reader:
-        cities.append(City(i[0], i[3], i[4]))
+        cities.append(City(i[0], float(i[3]), float(i[4])))
     return cities
 
 cityreader(cities)
